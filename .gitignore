@@ -1,0 +1,11 @@
+# Virtual environments
+.venv_ipo/
+.venv/
+venv/
+env/
+
+
+# Project specific
+.env
+.env.local
+.env.local.*
