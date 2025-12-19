@@ -3,3 +3,11 @@ requests
 beautifulsoup4
 selenium
 PyPDF2
+chromadb
+sentence_transformers
+huggingface_hub[hf_xet]
+plotly
+nbformat
+notebook
+gradio
+sqlite-utils

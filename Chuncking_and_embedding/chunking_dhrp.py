@@ -1,10 +1,15 @@
 
+import sys
+from pathlib import Path
+
+# Add parent directory to path
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
 import PyPDF2
 from typing import List
 import re
 import os
-from pathlib import Path
-from Utilities.utils import PDF_FILE_PATH
+from Utilities.utils import *
 
 
 def _split_text_into_chunks(
@@ -137,4 +142,4 @@ def extract_and_chunk_pdf(
     return all_chunks
 
 
-extract_and_chunk_pdf(PDF_FILE_PATH)
+# extract_and_chunk_pdf(PDF_FILE_PATH)
