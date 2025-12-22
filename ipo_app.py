@@ -1,9 +1,12 @@
-from ipo_evaluator import ipo_evaluator
+from ipo_evaluator import run_ui_eval
 import gradio as gr
 
-def main():
-    chat = gr.ChatInterface(fn=ipo_evaluator)
-    chat.launch(inbrowser = True)
+demo = gr.Interface(
+    fn=run_ui_eval,
+    inputs=gr.Textbox(label="Enter IPO Name"),
+    outputs=gr.JSON(),
+    title="IPO DRHP RAG Evaluator"
+)
 
 if __name__ == "__main__":
-    main()
+    demo.launch(inbrowser=True)
